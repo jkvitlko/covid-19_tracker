@@ -4,9 +4,10 @@ import './Table.css';
 
 function Table({ countries }) {
     return (
+        <>
         <div className="table">
-            {countries.map(countryInfo => (
-                <tr>
+            {countries.map((countryInfo , index) => (
+                <tr key={index}>
                     <td>
                         {countryInfo.country}
                     </td>
@@ -16,6 +17,7 @@ function Table({ countries }) {
                 </tr>
             ))}
         </div>
+        </>
     )
 }
 export default Table;
